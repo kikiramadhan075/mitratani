@@ -26,9 +26,9 @@ Route::post('register', function () {
 })->name('registerProcess');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('home', function () {
+    Route::get('admin', function () {
         return view('pages.home.dashboard');
-    })->name('home');
+    })->name('admin');
     Route::resource('user', UserController::class);
     Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
