@@ -24,11 +24,14 @@ Route::get('register', function () {
 Route::post('register', function () {
     return view('pages.auth.login');
 })->name('registerProcess');
+Route::get('home', function () {
+    return view('pages.home.index');
+})->name('home');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('home', function () {
-        return view('pages.home.dashboard');
-    })->name('home');
+    Route::get('admin', function () {
+        return view('pages.admin.dashboard');
+    })->name('admin');
     Route::resource('user', UserController::class);
     Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
