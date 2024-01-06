@@ -69,7 +69,7 @@
                                             <th>Category</th>
                                             <th>Price</th>
                                             <th>Photo</th>
-                                            <th>Created At</th>
+                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($products as $product)
@@ -93,7 +93,7 @@
                                                     @endif
 
                                                 </td>
-                                                <td>{{ $product->created_at }}</td>
+                                                <td>{{ $product->description }}</td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('product.edit', $product->id) }}'

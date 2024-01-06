@@ -30,9 +30,10 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|unique:products',
+            'description' => 'required|min:10',
             'price' => 'required|integer',
             'stock' => 'required|integer',
-            'category' => 'required|in:food,drink,snack',
+            'category' => 'required|in:organik,anorganik,obatobatan',
             'image' => 'required|image|mimes:png,jpg,jpeg'
         ]);
 
@@ -42,6 +43,7 @@ class ProductController extends Controller
 
         $product = new \App\Models\Product;
         $product->name = $request->name;
+        $product->description = $request->description;
         $product->price = (int) $request->price;
         $product->stock = (int) $request->stock;
         $product->category = $request->category;
