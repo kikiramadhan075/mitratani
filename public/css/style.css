@@ -1878,7 +1878,7 @@ h6 .badge {
 }
 .navbar.active {
   background-color: #00cc44;
-  box-shadow: rgba(103, 119, 239, 0.2) rgba(0, 0, 0, 0.03);
+  box-shadow: #92fdc833 rgba(0, 0, 0, 0.03);
 }
 
 .navbar-bg {
@@ -2242,7 +2242,7 @@ a.dropdown-item:focus, a.dropdown-item:active, a.dropdown-item.active {
 .dropdown-list .dropdown-item .dropdown-item-desc {
   line-height: 24px;
   white-space: normal;
-  color: #34395e;
+  color: #75ffb3;
   margin-left: 60px;
 }
 .dropdown-list .dropdown-item .dropdown-item-desc b {
@@ -2376,7 +2376,7 @@ ul.nav-tabs li.nav-item a.nav-link.active i {
 
 /* 3.21 Progress Bar */
 .progress-bar {
-  background-color: #6777ef;
+  background-color: #00cc44;
 }
 
 /* 3.22 Jumbotron */
@@ -3222,7 +3222,7 @@ body.layout-2 .main-sidebar .sidebar-menu li a.has-dropdown:after {
   right: 0;
 }
 body.layout-2 .main-sidebar .sidebar-menu li a:hover {
-  color: #6777ef;
+  color: #00cc44;
   background-color: transparent;
 }
 body.layout-2 .main-sidebar .sidebar-menu li ul.dropdown-menu li a {
@@ -3262,7 +3262,7 @@ body.layout-3 .navbar.navbar-secondary {
   z-index: 889;
 }
 body.layout-3 .navbar.navbar-secondary .navbar-nav > .nav-item.active > .nav-link {
-  color: #6777ef;
+  color: #00cc44;
 }
 body.layout-3 .navbar.navbar-secondary .navbar-nav > .nav-item.active > .nav-link:before {
   left: 35px;
@@ -3446,7 +3446,7 @@ body.layout-3 .main-footer {
   background-color: #f8fafb;
 }
 .main-sidebar .sidebar-menu li.active a {
-  color: #6777ef;
+  color: #00cc44;
   font-weight: 600;
   background-color: #f8fafb;
 }

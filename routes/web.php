@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.auth.login');
+
+
+//Route::get('/', function () {
+    //return view('pages.auth.login');
     // dd(bcrypt('admin123'));
-});
+//});
 Route::get('register', function () {
     return view('pages.auth.register');
 })->name('register');
@@ -30,5 +32,11 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.home.dashboard');
     })->name('home');
     Route::resource('user', UserController::class);
+    Route::resource('customer', CustomerController::class);
     Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
+
+// ------- AUTHENTICATION -------
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
