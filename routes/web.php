@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
     //return view('pages.auth.login');
     // dd(bcrypt('admin123'));
 //});
+
+// !----- ADMIN PAGE -----!
 Route::get('register', function () {
     return view('pages.auth.register');
 })->name('register');
@@ -36,7 +38,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
 
-// ------- AUTHENTICATION -------
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// !------ LANDING PAGE -------!
+Route::get('/', function () {
+    return view('pelanggan.layout.index');
+});
