@@ -34,7 +34,6 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.home.dashboard');
     })->name('home');
     Route::resource('user', UserController::class);
-    Route::resource('customer', CustomerController::class);
     Route::resource('product', \App\Http\Controllers\ProductController::class);
 });
 
