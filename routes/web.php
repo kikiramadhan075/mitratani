@@ -22,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 //});
 
 // !----- ADMIN PAGE -----!
+Route::get('/admin', function () {
+    return view('pages.auth.login');
+    // dd(bcrypt('admin123'));
+});
 Route::get('register', function () {
     return view('pages.auth.register');
 })->name('register');
