@@ -45,3 +45,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', function () {
     return view('pelanggan.layout.index');
 });
+
+Route::get('/tes', function () {
+    return "tes";
+});
